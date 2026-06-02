@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://psidiegobenevides.com.br/sitemap.xml
