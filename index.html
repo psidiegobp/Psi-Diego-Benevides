@@ -162,8 +162,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     position: absolute; border-radius: 50%;
     background: rgba(255,255,255,0.1);
   }
-  .hero-circle:nth-child(1) { width: 300px; height: 300px; top: 10%; left: 15%; animation: float 6s ease-in-out infinite; }
-  .hero-circle:nth-child(2) { width: 180px; height: 180px; bottom: 20%; right: 10%; animation: float 8s 2s ease-in-out infinite; }
+  .hero-circle:nth-child(1) { width: 300px; height: 300px; top: 10%; left: 15%; }
+  .hero-circle:nth-child(2) { width: 180px; height: 180px; bottom: 20%; right: 10%; }
   .hero-quote {
     position: absolute; bottom: 3rem; left: 3rem; right: 3rem;
     background: rgba(250,248,244,0.92); padding: 2rem 2.5rem;
@@ -500,20 +500,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p class="hero-subtitle">
       Psicólogo Clínico desde 2009, com experiência em atendimento psicológico online para adolescentes a partir dos 16 anos e adultos em todo o Brasil. Ao longo da trajetória profissional, já realizei mais de 1.500 atendimentos, oferecendo um espaço de escuta, acolhimento e cuidado psicológico.
     </p>
-    <div class="hero-actions">
-      <a href="#contato" class="btn-primary">Primeira Consulta</a>
-      <a href="#servicos" class="btn-secondary">Conhecer os Serviços</a>
-    </div>
   </div>
   <div class="hero-right">
     <div class="hero-image-bg"></div>
     <div class="hero-shapes">
       <div class="hero-circle"></div>
       <div class="hero-circle"></div>
-    </div>
-    <div class="hero-stats">
-      <span class="stat-number">+1500</span>
-      <span class="stat-label">Atendidos</span>
     </div>
     <div class="hero-quote">
       <p>"Aquele que olha para fora, sonha; quem olha para dentro, desperta"</p>
@@ -522,227 +514,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about" id="sobre">
-  <div class="about-image">
-    <div class="about-image-pattern"></div>
-    <div class="about-label">Sobre<br>Mim</div>
-  </div>
-  <div class="about-content reveal">
-    <h2 class="section-title">Quem sou <em>eu</em></h2>
-    <p class="about-text">
-      Olá, sou Diego Benevides, psicólogo clínico desde 2009, realizo atendimento on-line à adultos e adolescentes. Minha abordagem terapêutica é baseada na psicoterapia psicodinâmica e na psicologia analítica.
-    </p>
-    <p class="about-text">
-      Ofereço te ajudar a conquistar seu equilíbrio emocional e obter qualidade de vida. Possuo vasta experiência em clínica e em saúde mental.
-    </p>
-    <p class="about-text">
-      Atendo de forma online para todo o Brasil, oferecendo um ambiente acolhedor, confidencial e livre de julgamentos.
-    </p>
-    <div class="credentials">
-      <div class="credential-item">Graduado pela Universidade Tiradentes</div>
-      <div class="credential-item">Psicoterapia On-line</div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="services" id="servicos">
-  <div class="services-header reveal">
-    <div>
-      <div class="section-tag">O que ofereço</div>
-      <h2 class="section-title">Modalidades de<br><em>Atendimento</em></h2>
-    </div>
-    <p class="services-note">Cada atendimento é personalizado de acordo com as necessidades e objetivos de cada pessoa.</p>
-  </div>
-  <div class="services-grid">
-    <div class="service-card reveal">
-      <span class="service-number">01</span>
-      <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-        <circle cx="24" cy="16" r="8"/><path d="M8 40c0-8.837 7.163-16 16-16s16 7.163 16 16"/>
-      </svg>
-      <h3 class="service-title">Terapia Individual</h3>
-      <p class="service-desc">Acompanhamento semanal para adultos e jovens adultos. Abordagem integrativa com foco na psicologia psicodinâmica e analítica, trabalhando ansiedade, depressão, autoestima e questões existenciais.</p>
-    </div>
-    <div class="service-card reveal reveal-delay-1">
-      <span class="service-number">02</span>
-      <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-        <rect x="6" y="10" width="36" height="28" rx="2"/>
-        <path d="M16 10V6M32 10V6M6 20h36"/>
-      </svg>
-      <h3 class="service-title">Psicoterapia Online</h3>
-      <p class="service-desc">Psicoterapia online via plataforma segura para quem prefere conforto e praticidade. Atendimento com total confidencialidade e qualidade profissional.</p>
-    </div>
-    <div class="service-card reveal reveal-delay-2">
-      <span class="service-number">03</span>
-      <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M24 6l4 8 9 1.3-6.5 6.3 1.5 9L24 26l-8 4.6 1.5-9L11 15.3 20 14z"/>
-      </svg>
-      <h3 class="service-title">Orientação Vocacional</h3>
-      <p class="service-desc">Processo de autoconhecimento para jovens em transição de carreira. Identificação de habilidades, valores e propósito profissional.</p>
-    </div>
-    <div class="service-card reveal">
-      <span class="service-number">04</span>
-      <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M24 6C14.06 6 6 14.06 6 24s8.06 18 18 18 18-8.06 18-18S33.94 6 24 6z"/>
-        <path d="M24 16v8l5 3"/>
-      </svg>
-      <h3 class="service-title">Avaliação Psicológica</h3>
-      <p class="service-desc">Processo avaliativo com uso de instrumentos psicológicos para fins clínicos, laudos e perícias. Relatórios detalhados e sigilosos.</p>
-    </div>
-
-    <div class="service-card reveal reveal-delay-2">
-      <span class="service-number">05</span>
-      <svg class="service-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
-        <path d="M6 36l10-10 8 8 18-22"/>
-      </svg>
-      <h3 class="service-title">Acompanhamento de Luto</h3>
-      <p class="service-desc">Suporte especializado para processar perdas — seja de pessoas queridas, relacionamentos, empregos ou fases da vida.</p>
-    </div>
-  </div>
-</section>
-
-<!-- APPROACH -->
-<section class="approach" id="abordagem">
-  <div class="reveal">
-    <div class="section-tag">Minha prática</div>
-    <h2 class="section-title">Uma abordagem<br><em>humana</em> e científica</h2>
-    <p class="approach-text">
-      Acredito em uma psicoterapia que une o rigor científico à sensibilidade humana. Cada sessão é um espaço de escuta genuína, onde construímos juntos ferramentas práticas e duradouras para a mudança.
-    </p>
-    <p class="approach-text">
-      Minha abordagem permite identificar padrões de pensamento que geram sofrimento mental e trabalha para transformá-los e ressignificá-los. Focando na modificação de traumas, gatilhos e crenças disfuncionais, com o objetivo de promover equilíbrio emocional e qualidade de vida.  
-    </p>
-  </div>
-  <div class="approach-right reveal reveal-delay-1">
-    <div class="approach-item">
-      <h4>Escuta Ativa e Sem Julgamento</h4>
-      <p>Você será ouvido(a) com presença total e respeito genuíno pela sua história.</p>
-    </div>
-    <div class="approach-item">
-      <h4>Técnicas Baseadas em Evidências</h4>
-      <p>Uso de protocolos comprovados pela neurociência e psicologia clínica contemporânea.</p>
-    </div>
-    <div class="approach-item">
-      <h4>Objetivos Claros e Práticos</h4>
-      <p>Definimos metas juntos e acompanhamos seu progresso ao longo do processo terapêutico.</p>
-    </div>
-    <div class="approach-item">
-      <h4>Sigilo e Ética Profissional</h4>
-      <p>Total confidencialidade conforme o Código de Ética do Conselho Federal de Psicologia.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contato">
-  <div class="contact-left">
-    <div class="section-tag">Vamos conversar</div>
-    <h2 class="section-title">Dê o<br>primeiro passo</h2>
-    <div class="contact-info">
-      <div class="contact-info-item">
-        <div class="contact-info-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-          </svg>
-        </div>
-        <div class="contact-info-text">
-          <h4>WhatsApp</h4>
-          <p><a href="https://api.whatsapp.com/send/?phone=557592005073&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:none;">(75) 9200-5073</a></p>
-        </div>
-      </div>
-      <div class="contact-info-item">
-        <div class="contact-info-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-            <line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/>
-            <line x1="3" y1="10" x2="21" y2="10"/>
-          </svg>
-        </div>
-        <div class="contact-info-text">
-          <h4>Horários</h4>
-          <p>Segunda a Sexta · 9h às 19h</p>
-        </div>
-      </div>
-      <div class="contact-info-item">
-        <div class="contact-info-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-          </svg>
-        </div>
-        <div class="contact-info-text">
-          <h4>E-mail</h4>
-          <p>diegobp.psi@gmail.com</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="contact-right" style="display:flex; align-items:center; justify-content:center; background: var(--cream);">
-    <div style="text-align:center; max-width: 380px;">
-      <div class="section-tag" style="justify-content:center;">Entre em contato</div>
-      <h3 style="font-family:'Cormorant Garamond',serif; font-size:2rem; font-weight:300; color:var(--ink); margin-bottom:1.2rem; line-height:1.3;">Estou aqui para<br><em style="color:var(--sage-dark);">te ouvir</em></h3>
-      <p style="font-size:0.9rem; color:var(--ink-light); line-height:1.8; margin-bottom:2rem;">Clique no botão abaixo e confira a disponibilidade.</p>
-      <a href="https://calendar.app.google/yC5nAmyRGbPMi9zx7" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display:inline-block; margin-bottom:1rem;">Agende sua consulta aqui</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">Diego Benevides · Psicólogo</div>
-  <span class="footer-copy">© 2026 · CRP 03/11930 · Todos os direitos reservados</span>
-  <div class="footer-links">
-    <a href="#">Política de Privacidade</a>
-    <a href="https://www.instagram.com/diego.benevides.psi/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="display:inline-flex; align-items:center; gap:0.5rem; color:rgba(250,248,244,0.4); text-decoration:none; transition:color 0.3s;" onmouseover="this.style.color='#a8b8a0'" onmouseout="this.style.color='rgba(250,248,244,0.4)'">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-        <circle cx="12" cy="12" r="4"/>
-        <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
-      </svg>
-      <span style="font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">Instagram</span>
-    </a>
-  </div>
-</footer>
-
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-</script>
 <!-- Event snippet for Reservar horário conversion page -->
 <script>
   gtag('event', 'conversion', {'send_to': 'AW-18170400847/ka6hCIP82rEcEM-gqdhD'});
 </script>
-
-<!-- SEO: H2 ocultos para mecanismos de busca -->
-<div style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
-  <h2>Terapia Online para Ansiedade</h2>
-  <h2>Psicoterapia para Depressão</h2>
-  <h2>Atendimento Psicológico para Adultos e Adolescentes</h2>
-  <h2>Desenvolvimento Pessoal e Bem-Estar Emocional</h2>
-  <h2>Psicoterapia Online</h2>
-  <h2>Atendimento Psicológico Online</h2>
-  <h2>Terapia para Ansiedade</h2>
-  <h2>Terapia para Depressão</h2>
-  <h2>Terapia para Adultos</h2>
-  <h2>Terapia para Adolescentes</h2>
-  <h2>Tratamento de Dependência Emocional</h2>
-  <h2>Tratamento de Desenvolvimento Pessoal</h2>
-  <h2>Tratamento Dor Emocional</h2>
-  <h2>Tratamento Insônia</h2>
-  <h2>Tratamento Vazio Emocional</h2>
-  <h2>Tratamento Dificuldade de Memória</h2>
-  <h2>Tratamento Dificuldade Concentração</h2>
-  <h2>Tratamento Angústia</h2>
-  <h2>Tratamento Tristeza</h2>
-  <h2>Tratamento Dor de Cabeça</h2>
-  <h2>Tratamento Agitação</h2>
-  <h2>Tratamento Gravidez</h2>
-  <h2>Tratamento Luto</h2>
-  <h2>Vasectomia</h2>
-  <h2>Aborto</h2>
-  <h2>Burnout</h2>
-</div>
 </body>
 </html>
