@@ -417,6 +417,38 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .btn-submit:hover { background: var(--terracotta); }
 
+  /* ── WHATSAPP FLUTUANTE ── */
+  .whatsapp-float {
+    position: fixed; bottom: 2rem; right: 2rem; z-index: 200;
+    display: flex; align-items: center; justify-content: center;
+    width: 60px; height: 60px; border-radius: 50%;
+    background: #25D366; box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    text-decoration: none; transition: transform 0.3s ease;
+  }
+  .whatsapp-float:hover { transform: scale(1.08); }
+  .whatsapp-float svg { width: 32px; height: 32px; fill: var(--warm-white); }
+  .whatsapp-tooltip {
+    position: absolute; right: 74px; top: 50%; transform: translateY(-50%);
+    background: var(--warm-white); color: var(--ink);
+    padding: 0.75rem 1.3rem; border-radius: 24px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 400;
+    line-height: 1.4; width: 210px; white-space: normal;
+    opacity: 0; visibility: hidden; pointer-events: none;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+  }
+  .whatsapp-tooltip::after {
+    content: ''; position: absolute; left: 100%; top: 50%;
+    transform: translateY(-50%); border: 8px solid transparent;
+    border-left-color: var(--warm-white);
+  }
+  .whatsapp-float:hover .whatsapp-tooltip,
+  .whatsapp-float:focus .whatsapp-tooltip { opacity: 1; visibility: visible; }
+  @media (max-width: 900px) {
+    .whatsapp-float { bottom: 1.2rem; right: 1.2rem; width: 54px; height: 54px; }
+    .whatsapp-tooltip { display: none; }
+  }
+
   /* ── FOOTER ── */
   footer {
     background: var(--ink); padding: 3rem 8rem;
@@ -547,5 +579,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
   gtag('event', 'conversion', {'send_to': 'AW-18170400847/ka6hCIP82rEcEM-gqdhD'});
 </script>
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://api.whatsapp.com/send/?phone=557592005073&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.75 13.4L3 21l3.7-1.28a8.9 8.9 0 0 0 4.35 1.13h.01a8.94 8.94 0 0 0 8.94-8.93 8.86 8.86 0 0 0-2.4-5.6zM12.06 19.3a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.97.94-2.73-.18-.28a7.42 7.42 0 1 1 6.09 3.24zm4.07-5.56c-.22-.11-1.31-.65-1.51-.72-.2-.08-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.16-.48.05a6.06 6.06 0 0 1-1.78-1.1 6.66 6.66 0 0 1-1.23-1.53c-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43a.82.82 0 0 0-.6.28 2.5 2.5 0 0 0-.78 1.86c0 1.1.8 2.16.91 2.31.11.15 1.58 2.41 3.83 3.38.53.23.95.37 1.27.47.53.17 1.02.15 1.4.09.43-.06 1.31-.53 1.49-1.05.18-.51.18-.95.13-1.05-.06-.1-.2-.16-.42-.27z"/></svg>
+  <span class="whatsapp-tooltip">Precisa de ajuda para marcar sua consulta?</span>
+</a>
 </body>
 </html>
