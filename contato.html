@@ -609,13 +609,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- TESTIMONIALS (SIMULAÇÃO — substituir por depoimentos reais e válidos, respeitando as normas do CFP sobre publicidade) -->
+<!-- TESTIMONIALS -->
 <section class="testimonials" id="depoimentos">
   <div class="reveal visible">
     <div class="section-tag">Depoimentos</div>
     <h2 class="section-title">Como foi sua experiência<br><em>durante o atendimento?</em></h2>
   </div>
-  <div class="testimonials-grid">
+  <div class="testimonials-grid" id="testimonials-grid">
+    <!-- Depoimentos aprovados são carregados automaticamente aqui via JavaScript -->
   </div>
 
   <!-- FORMULÁRIO DE ENVIO DE DEPOIMENTO -->
@@ -624,45 +625,63 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p style="font-size:0.85rem; color:var(--ink-light); line-height:1.7; margin-bottom:1.8rem;">
       Seu relato passa por uma análise antes de ser publicado no site, para garantir sigilo e seu consentimento.
     </p>
-    <form id="testimonial-form">
+    <form id="testimonial-form" target="testimonial-hidden-iframe">
       <div class="form-group">
         <label for="test-name">Como você quer ser identificado(a)</label>
-        <input type="text" id="test-name" placeholder="Ex: M. S., ou apenas suas iniciais" required>
+        <input type="text" id="test-name" name="nome" placeholder="Ex: M. S., ou apenas suas iniciais" required>
       </div>
       <div class="form-group">
         <label for="test-email">Seu e-mail (não será publicado)</label>
-        <input type="email" id="test-email" placeholder="seuemail@exemplo.com" required>
+        <input type="email" id="test-email" name="email" placeholder="seuemail@exemplo.com" required>
       </div>
       <div class="form-group">
         <label for="test-text">Seu depoimento</label>
-        <textarea id="test-text" rows="5" placeholder="Conte como foi sua experiência com o atendimento..." required></textarea>
+        <textarea id="test-text" name="depoimento" rows="5" placeholder="Conte como foi sua experiência com o atendimento..." required></textarea>
       </div>
       <button type="submit" class="btn-submit">Enviar depoimento</button>
       <p id="test-confirm" style="display:none; font-size:0.82rem; color:var(--sage-dark); margin-top:1rem; text-align:center;">
-        Obrigado! Seu aplicativo de e-mail deve abrir para você concluir o envio.
+        Obrigado! Seu depoimento foi enviado e será publicado após análise.
       </p>
     </form>
   </div>
+  <!-- iframe invisível: recebe o envio do formulário sem sair da página -->
+  <iframe name="testimonial-hidden-iframe" style="display:none;"></iframe>
 </section>
 
 <script>
+  // ⚠️ COLE AQUI A URL DO SEU APP SCRIPT (termina em /exec) — veja o arquivo apps-script-depoimentos.gs
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwrFJQcusYeUev91PR08bp-FkrZm8K7ITKlLaC1Fr5RjXcNBOagThpMMbngeYScZH7MRg/exec';
+
+  // Envio do formulário
   const testForm = document.getElementById('testimonial-form');
-  if (testForm) {
-    testForm.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const name = document.getElementById('test-name').value.trim();
-      const email = document.getElementById('test-email').value.trim();
-      const text = document.getElementById('test-text').value.trim();
-      const subject = encodeURIComponent('Novo depoimento para o site');
-      const body = encodeURIComponent(
-        'Identificação sugerida: ' + name + '\n' +
-        'E-mail de contato: ' + email + '\n\n' +
-        'Depoimento:\n' + text
-      );
-      window.location.href = 'mailto:diegobp.psi@gmail.com?subject=' + subject + '&body=' + body;
-      document.getElementById('test-confirm').style.display = 'block';
-      testForm.reset();
+  if (testForm && APPS_SCRIPT_URL.indexOf('COLE_AQUI') === -1) {
+    testForm.setAttribute('action', APPS_SCRIPT_URL);
+    testForm.setAttribute('method', 'POST');
+    testForm.addEventListener('submit', function () {
+      setTimeout(function () {
+        document.getElementById('test-confirm').style.display = 'block';
+        testForm.reset();
+      }, 600);
     });
+  }
+
+  // Carrega os depoimentos já aprovados (via JSONP, sem problemas de CORS)
+  function renderApprovedTestimonials(list) {
+    const grid = document.getElementById('testimonials-grid');
+    if (!grid || !list || !list.length) return;
+    grid.innerHTML = list.map(function (item) {
+      return '<div class="testimonial-card reveal visible">' +
+        '<div class="testimonial-stars">★★★★★</div>' +
+        '<p class="testimonial-quote">' + item.depoimento + '</p>' +
+        '<div class="testimonial-author">— ' + item.nome + '</div>' +
+        '</div>';
+    }).join('');
+  }
+
+  if (APPS_SCRIPT_URL.indexOf('COLE_AQUI') === -1) {
+    const script = document.createElement('script');
+    script.src = APPS_SCRIPT_URL + '?callback=renderApprovedTestimonials';
+    document.body.appendChild(script);
   }
 </script>
 
