@@ -649,10 +649,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <script>
-  // ⚠️ COLE AQUI A URL DO SEU APP SCRIPT (termina em /exec) — veja o arquivo apps-script-depoimentos.gs
   const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwrFJQcusYeUev91PR08bp-FkrZm8K7ITKlLaC1Fr5RjXcNBOagThpMMbngeYScZH7MRg/exec';
+  const SHEET_ID = '1YiKm0yiuA0449FDMm_N7SS5inq2nl6UaxThiTvGvXJ8';
 
-  // Envio do formulário
+  // Envio do formulário (continua usando o Apps Script)
   const testForm = document.getElementById('testimonial-form');
   if (testForm && APPS_SCRIPT_URL.indexOf('COLE_AQUI') === -1) {
     testForm.setAttribute('action', APPS_SCRIPT_URL);
@@ -665,7 +665,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   }
 
-  // Carrega os depoimentos já aprovados (via JSONP, sem problemas de CORS)
   function renderApprovedTestimonials(list) {
     const grid = document.getElementById('testimonials-grid');
     if (!grid || !list || !list.length) return;
@@ -678,11 +677,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }).join('');
   }
 
-  if (APPS_SCRIPT_URL.indexOf('COLE_AQUI') === -1) {
-    const script = document.createElement('script');
-    script.src = APPS_SCRIPT_URL + '?callback=renderApprovedTestimonials&_=' + Date.now();
-    document.body.appendChild(script);
-  }
+  // Leitura via docs.google.com (gviz) — domínio raro de ser bloqueado por adblockers,
+  // ao contrário do redirecionamento script.googleusercontent.com usado pelo Apps Script.
+  window.google = window.google || {};
+  window.google.visualization = window.google.visualization || {};
+  window.google.visualization.Query = window.google.visualization.Query || {};
+  window.google.visualization.Query.setResponse = function (data) {
+    const rows = (data.table && data.table.rows) || [];
+    const approved = rows
+      .filter(function (r) {
+        const cell = r.c && r.c[4];
+        return cell && String(cell.v).trim().toLowerCase() === 'sim';
+      })
+      .map(function (r) {
+        return {
+          nome: (r.c[1] && r.c[1].v) || '',
+          depoimento: (r.c[3] && r.c[3].v) || ''
+        };
+      });
+    renderApprovedTestimonials(approved);
+  };
+
+  const gvizScript = document.createElement('script');
+  gvizScript.src = 'https://docs.google.com/spreadsheets/d/' + SHEET_ID +
+    '/gviz/tq?tqx=out:json&sheet=Depoimentos&headers=1&_=' + Date.now();
+  document.body.appendChild(gvizScript);
 </script>
 
 <!-- Event snippet for Reservar horário conversion page -->
