@@ -680,7 +680,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   if (APPS_SCRIPT_URL.indexOf('COLE_AQUI') === -1) {
     const script = document.createElement('script');
-    script.src = APPS_SCRIPT_URL + '?callback=renderApprovedTestimonials';
+    script.src = APPS_SCRIPT_URL + '?callback=renderApprovedTestimonials&_=' + Date.now();
     document.body.appendChild(script);
   }
 </script>
