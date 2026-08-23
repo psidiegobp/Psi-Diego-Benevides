@@ -514,14 +514,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    nav { padding: 1.2rem 1.5rem; }
-    .nav-links { display: none; }
+    nav { display: flex; flex-direction: column; align-items: center; padding: 1rem 1rem; gap: 0.6rem; }
     .nav-cta { display: none; }
-    .nav-toggle { display: flex; }
-    .nav-logo { font-size: 1.05rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 60vw; }
+    .nav-toggle { display: none; }
+    .nav-logo { font-size: 1.05rem; white-space: nowrap; }
+    .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.9rem 1.2rem; }
+    .nav-links a { font-size: 0.7rem; }
+    #sobre, #servicos, #abordagem, #contato { padding-top: 8.5rem !important; }
     .hero { grid-template-columns: 1fr; }
     .hero-right { min-height: 50vw; }
-    .hero-left { padding: 3rem 2rem 3rem 2rem; }
+    .hero-left { padding: 8.5rem 2rem 3rem 2rem; }
     .about, .contact { grid-template-columns: 1fr; }
     .services, .approach, .testimonials { padding: 4rem 2rem; }
     .services-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
@@ -576,8 +578,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <rect x="6" y="10" width="36" height="28" rx="2"/>
         <path d="M16 10V6M32 10V6M6 20h36"/>
       </svg>
-            <h3 class="service-title">Psicoterapia Online</h3>
-         <p class="service-desc">O atendimento online oferece a possibilidade de realizar a psicoterapia de forma prática e segura, sem a necessidade de deslocamento. As sessões são realizadas por videochamada, em um ambiente reservado e adequado para preservar a privacidade e o sigilo profissional.</p>
+      <h3 class="service-title">Psicoterapia Online</h3>
+      <p class="service-desc">O atendimento online oferece a possibilidade de realizar a psicoterapia de forma prática e segura, sem a necessidade de deslocamento. As sessões são realizadas por videochamada, em um ambiente reservado e adequado para preservar a privacidade e o sigilo profissional.</p>
       <p class="service-desc">A terapia online possui a duração aproximada de 50 minutos. Sendo necessário o agendamento prévio de cada atendimento.</p>
     </div>
   </div>
