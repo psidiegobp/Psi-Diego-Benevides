@@ -571,7 +571,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="hero-left">
     <div class="hero-tag">CRP 03/11930 · Diego Benevides</div>
     <h1 class="hero-title">
-      Psicólogo Online 
+      Psicólogo Online |
     </h1>
     <p class="hero-subtitle" style="margin-bottom: 0.6rem;">
       Psicólogo Clínico desde 2009, com experiência em atendimento psicológico online à adultos em todo o Brasil. Ao longo da trajetória profissional, já realizei mais de 1.500 atendimentos, oferecendo um espaço de escuta e acolhimento psicológico.
@@ -592,9 +592,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<!-- Event snippet for Reservar horário conversion page -->
+<!-- TESTIMONIALS (exibição — carrega automaticamente os depoimentos aprovados na planilha) -->
+<section class="testimonials" id="depoimentos">
+  <div class="reveal visible">
+    <div class="section-tag">Depoimentos</div>
+    <h2 class="section-title">O que dizem sobre<br><em>o atendimento</em></h2>
+  </div>
+  <div class="testimonials-grid" id="testimonials-grid">
+    <!-- Depoimentos aprovados são carregados automaticamente aqui via JavaScript -->
+  </div>
+  <p style="text-align:center; margin-top:3rem;">
+    <a href="https://psidiegobenevides.com.br/contato#depoimentos" class="btn-secondary">Deixar meu depoimento</a>
+  </p>
+</section>
+
 <script>
-  gtag('event', 'conversion', {'send_to': 'AW-18170400847/ka6hCIP82rEcEM-gqdhD'});
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwrFJQcusYeUev91PR08bp-FkrZm8K7ITKlLaC1Fr5RjXcNBOagThpMMbngeYScZH7MRg/exec';
+
+  function renderApprovedTestimonials(list) {
+    const grid = document.getElementById('testimonials-grid');
+    if (!grid || !list || !list.length) return;
+    grid.innerHTML = list.map(function (item) {
+      return '<div class="testimonial-card reveal visible">' +
+        '<div class="testimonial-stars">★★★★★</div>' +
+        '<p class="testimonial-quote">' + item.depoimento + '</p>' +
+        '<div class="testimonial-author">— ' + item.nome + '</div>' +
+        '</div>';
+    }).join('');
+  }
+
+  const script = document.createElement('script');
+  script.src = APPS_SCRIPT_URL + '?callback=renderApprovedTestimonials&_=' + Date.now();
+  document.body.appendChild(script);
 </script>
 <!-- WHATSAPP FLUTUANTE -->
 <a href="https://api.whatsapp.com/send/?phone=557592005073&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Falar no WhatsApp">
@@ -619,6 +648,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     });
   }
+</script>
+<!-- Event snippet for Reservar horário conversion page -->
+<script>
+  gtag('event', 'conversion', {'send_to': 'AW-18170400847/ka6hCIP82rEcEM-gqdhD'});
 </script>
 </body>
 </html>
