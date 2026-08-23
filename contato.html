@@ -514,14 +514,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    nav { padding: 1.2rem 1.5rem; }
-    .nav-links { display: none; }
+    nav { display: flex; flex-direction: column; align-items: center; padding: 1rem 1rem; gap: 0.6rem; }
     .nav-cta { display: none; }
-    .nav-toggle { display: flex; }
-    .nav-logo { font-size: 1.05rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 60vw; }
+    .nav-toggle { display: none; }
+    .nav-logo { font-size: 1.05rem; white-space: nowrap; }
+    .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.9rem 1.2rem; }
+    .nav-links a { font-size: 0.7rem; }
+    #sobre, #servicos, #abordagem, #contato { padding-top: 8.5rem !important; }
     .hero { grid-template-columns: 1fr; }
     .hero-right { min-height: 50vw; }
-    .hero-left { padding: 3rem 2rem 3rem 2rem; }
+    .hero-left { padding: 8.5rem 2rem 3rem 2rem; }
     .about, .contact { grid-template-columns: 1fr; }
     .services, .approach, .testimonials { padding: 4rem 2rem; }
     .services-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
