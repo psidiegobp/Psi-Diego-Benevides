@@ -514,14 +514,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    nav { padding: 1.2rem 1.5rem; }
-    .nav-links { display: none; }
+    nav { display: flex; flex-direction: column; align-items: center; padding: 1rem 1rem; gap: 0.6rem; }
     .nav-cta { display: none; }
-    .nav-toggle { display: flex; }
-    .nav-logo { font-size: 1.05rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 60vw; }
+    .nav-toggle { display: none; }
+    .nav-logo { font-size: 1.05rem; white-space: nowrap; }
+    .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.9rem 1.2rem; }
+    .nav-links a { font-size: 0.7rem; }
+    #sobre, #servicos, #abordagem, #contato { padding-top: 8.5rem !important; }
     .hero { grid-template-columns: 1fr; }
     .hero-right { min-height: 50vw; }
-    .hero-left { padding: 3rem 2rem 3rem 2rem; }
+    .hero-left { padding: 8.5rem 2rem 3rem 2rem; }
     .about, .contact { grid-template-columns: 1fr; }
     .services, .approach, .testimonials { padding: 4rem 2rem; }
     .services-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
@@ -576,30 +578,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="approach-right reveal visible">
     <div class="approach-item">
-      <h4>Escuta Ativa e Sem Julgamento</h4>
-      <p>Você será ouvido(a) com presença total e respeito genuíno pela sua história.</p>
-    </div>
-    <div class="approach-item">
       <h4>Autoconhecimento</h4>
       <p>O objetivo não é apenas eliminar um sintoma, mas ampliar a compreensão sobre si mesmo e desenvolver maneiras mais adaptativas de lidar com emoções e relacionamentos.</p>
     </div>
     <div class="approach-item">
       <h4>Relacionamentos</h4>
-      <p> observa padrões repetitivos nas relações e a forma como a pessoa se vincula aos outros.</p>
+      <p>Observa padrões repetitivos nas relações e a forma como a pessoa se vincula aos outros.</p>
     </div>
     <div class="approach-item">
       <h4>Conflitos internos</h4>
-      <p>trabalha com contradições entre desejos, necessidades, valores e expectativas.</p>
+      <p>Trabalha com contradições entre desejos, necessidades, valores e expectativas.</p>
     </div>
     <div class="approach-item">
       <h4>História de vida</h4>
       <p>Experiências da infância, relações familiares e acontecimentos importantes são considerados para entender padrões atuais.</p>
     </div>
-     <div class="approach-item">
+    <div class="approach-item">
       <h4>Sigilo e Ética Profissional</h4>
       <p>Total confidencialidade conforme o Código de Ética do Conselho Federal de Psicologia.</p>
     </div>
-   </div>
+  </div>
 </section>
 
 <!-- Event snippet for Reservar horário conversion page -->
