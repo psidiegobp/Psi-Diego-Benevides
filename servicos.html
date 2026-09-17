@@ -490,8 +490,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   /* ── FOOTER ── */
   footer {
-    background: var(--ink); padding: 3rem 8rem;
-    display: flex; align-items: center; justify-content: space-between;
+    background: var(--ink); padding: 3rem 12rem;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center;
+    gap: 0.8rem;
     border-top: 1px solid rgba(255,255,255,0.05);
   }
   .footer-logo {
@@ -540,7 +542,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .services-grid, .testimonials-grid { grid-template-columns: 1fr; }
     .approach { padding: 4rem 2rem; gap: 3rem; }
     .approach { grid-template-columns: 1fr; }
-    footer { flex-direction: column; gap: 1.5rem; text-align: center; padding: 2rem; }
+    footer { gap: 0.8rem; padding: 2rem 2rem 8rem 2rem; }
     .contact-left { padding: 3rem 2rem; }
     .contact-right { padding: 3rem 2rem; }
   }
@@ -593,6 +595,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">Psicólogo · Diego Benevides</div>
+  <div class="footer-copy">© 2026 · CRP 03/11930 · Todos os direitos reservados</div>
+</footer>
 
 <!-- Event snippet for Reservar horário conversion page -->
 <script>
