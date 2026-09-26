@@ -4,12 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="color-scheme" content="light only">
-<title>Psicólogo | Relacionamento e Autoestima</title>
+<title>Psicólogo Diego Benevides | Relacionamento e Autoestima</title>
 <!-- SEO: Terapia Online -->
 <meta name="description" content="Psicólogo Diego Benevides — Especialista em relacionamentos e autoestima. Atendimento psicológico online para todo o Brasil. Agende sua primeira sessão contato:+55-75-92005073.">
 <meta name="keywords" content="Problemas de relacionamento, psicólogo para relacionamento, ciúmes no relacionamento, psicólogo especialista em relacionamentos, insegurança no relacionamento, psicólogo especializado em autoestima
  ">
 <meta name="author" content="Diego Benevides">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com">
 <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -32,12 +35,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "sameAs": ["https://www.instagram.com/diego.benevides.psi/"]
 }
 </script>
-<link rel="canonical" href="https://psidiegobenevides.com.br/abordagem">
+<link rel="canonical" href="https://psidiegobenevides.com.br/">
 <!-- Open Graph (WhatsApp / redes sociais) -->
 <meta property="og:title" content="Psicólogo Diego Benevides | Terapia Online">
 <meta property="og:description" content="Terapia online com psicólogo especializado. Atendimento acolhedor, sigiloso e baseado em evidências. Agende agora.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://psidiegobenevides.com.br/abordagem">
+<meta property="og:url" content="https://psidiegobenevides.com.br/">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18170400847"></script>
 <script>
@@ -160,8 +163,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .hero-subtitle {
     font-size: 1rem; font-weight: 300; line-height: 1.8;
     color: var(--ink-light); max-width: 420px; margin-bottom: 3rem;
+    text-align: justify; text-indent: 1.5em;
   }
-  .hero-actions { display: flex; gap: 1.2rem; align-items: center; }
+  .hero-actions { display: flex; gap: 1.2rem; align-items: center; flex-wrap: wrap; margin-top: 0.5rem; }
   .btn-primary {
     background: var(--sage-dark); color: var(--warm-white);
     padding: 1rem 2.2rem; font-size: 0.82rem;
@@ -170,6 +174,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     display: inline-block;
   }
   .btn-primary:hover { background: var(--terracotta); transform: translateY(-2px); }
+  .btn-whatsapp-hero {
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    background: #25D366; color: var(--warm-white);
+    padding: 1rem 2.2rem; font-size: 0.82rem;
+    font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    border: none; cursor: pointer; transition: all 0.3s; text-decoration: none;
+  }
+  .btn-whatsapp-hero:hover { background: #1ebe5a; transform: translateY(-2px); }
+  .btn-whatsapp-hero svg { width: 20px; height: 20px; fill: var(--warm-white); flex-shrink: 0; }
   .btn-secondary {
     font-size: 0.82rem; font-weight: 400; letter-spacing: 0.08em;
     color: var(--ink-light); text-decoration: none;
@@ -196,7 +209,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .hero-circle:nth-child(1) { width: 300px; height: 300px; top: 10%; left: 15%; }
   .hero-circle:nth-child(2) { width: 180px; height: 180px; bottom: 20%; right: 10%; }
   .hero-quote {
-    position: absolute; bottom: 3rem; left: 3rem; right: 3rem;
+    position: absolute; bottom: 3rem; left: 3rem; right: 8.5rem;
     background: rgba(250,248,244,0.92); padding: 2rem 2.5rem;
     backdrop-filter: blur(8px);
   }
@@ -356,7 +369,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   .approach-text {
     font-size: 0.95rem; font-weight: 300; line-height: 1.9;
     color: rgba(250,248,244,0.65); margin-bottom: 1.2rem;
-    text-align: justify; text-indent: 1.5em;
   }
   .approach-right { display: flex; flex-direction: column; gap: 1.5px; }
   .approach-item {
@@ -452,42 +464,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /* ── WHATSAPP FLUTUANTE ── */
   .whatsapp-float {
     position: fixed; bottom: 2rem; right: 2rem; z-index: 200;
-    display: flex; align-items: center; justify-content: center;
-    width: 108px; height: 108px; border-radius: 50%;
+    display: inline-flex; align-items: center; gap: 0.7rem;
+    padding: 1rem 1.6rem; border-radius: 50px;
     background: #25D366; box-shadow: 0 6px 24px rgba(37,211,102,0.5);
     text-decoration: none; transition: transform 0.3s ease;
   }
   .whatsapp-float::before {
-    content: ''; position: absolute; inset: 0; border-radius: 50%;
+    content: ''; position: absolute; inset: 0; border-radius: 50px;
     background: #25D366; z-index: -1;
-    animation: whatsapp-pulse 2.2s ease-out infinite;
+    animation: whatsapp-pulse 1.3s ease-out infinite;
   }
-  .whatsapp-float:hover { transform: scale(1.08); }
+  .whatsapp-float:hover { transform: scale(1.05); }
   @keyframes whatsapp-pulse {
-    0% { opacity: 0.55; transform: scale(1); }
-    100% { opacity: 0; transform: scale(1.9); }
+    0% { opacity: 0.75; transform: scale(1); }
+    100% { opacity: 0; transform: scale(1.45); }
   }
-  .whatsapp-float svg { width: 54px; height: 54px; fill: var(--warm-white); position: relative; z-index: 1; }
-  .whatsapp-tooltip {
-    position: absolute; right: 74px; top: 50%; transform: translateY(-50%);
-    background: var(--warm-white); color: var(--ink);
-    padding: 0.75rem 1.3rem; border-radius: 24px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
-    font-family: 'DM Sans', sans-serif; font-size: 0.82rem; font-weight: 400;
-    line-height: 1.4; width: 210px; white-space: normal;
-    opacity: 0; visibility: hidden; pointer-events: none;
-    transition: opacity 0.25s ease, visibility 0.25s ease;
+  .whatsapp-float svg { width: 30px; height: 30px; fill: var(--warm-white); position: relative; z-index: 1; flex-shrink: 0; }
+  .whatsapp-float-text {
+    position: relative; z-index: 1;
+    font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500;
+    color: var(--warm-white); white-space: nowrap; letter-spacing: 0.01em;
   }
-  .whatsapp-tooltip::after {
-    content: ''; position: absolute; left: 100%; top: 50%;
-    transform: translateY(-50%); border: 8px solid transparent;
-    border-left-color: var(--warm-white);
-  }
-  .whatsapp-float:hover .whatsapp-tooltip,
-  .whatsapp-float:focus .whatsapp-tooltip { opacity: 1; visibility: visible; }
   @media (max-width: 900px) {
-    .whatsapp-float { bottom: 1.2rem; right: 1.2rem; width: 88px; height: 88px; }
-    .whatsapp-tooltip { display: none; }
+    .whatsapp-float { bottom: 1.2rem; right: 1.2rem; padding: 0.85rem 1.3rem; }
+    .whatsapp-float svg { width: 26px; height: 26px; }
+    .whatsapp-float-text { font-size: 0.82rem; }
   }
 
   /* ── FOOTER ── */
@@ -533,9 +534,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .nav-logo { font-size: 1.05rem; white-space: nowrap; }
     .nav-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.9rem 1.2rem; }
     .nav-links a { font-size: 0.7rem; }
-    #sobre, #servicos, #abordagem, #contato { padding-top: 8.5rem !important; }
     .hero { grid-template-columns: 1fr; }
     .hero-right { min-height: 50vw; }
+    .hero-quote { position: static; margin-top: 1.5rem; padding: 1.2rem 1.5rem; }
+    .hero-quote p { font-size: 0.95rem; }
     .hero-left { padding: 8.5rem 2rem 3rem 2rem; }
     .about, .contact { grid-template-columns: 1fr; }
     .services, .approach, .testimonials { padding: 4rem 2rem; }
@@ -547,9 +549,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     footer { gap: 0.8rem; padding: 2rem 2rem 8rem 2rem; }
     .contact-left { padding: 3rem 2rem; }
     .contact-right { padding: 3rem 2rem; }
+    .hero-actions { flex-direction: column; align-items: stretch; }
+    .btn-whatsapp-hero, .btn-primary { justify-content: center; text-align: center; }
   }
 </style>
-
+</head>
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5TKJ8CTP"
@@ -578,37 +582,40 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <a href="https://psidiegobenevides.com.br/contato">Contato</a>
 </div>
 
-<!-- APPROACH -->
-<section class="approach" id="abordagem" style="padding-top:10rem; min-height:100vh;">
-  <div class="reveal visible">
-    <div class="section-tag">Minha prática</div>
-    <h1 class="section-title">Uma abordagem<br><em>humana</em> e científica</h1>
-    <p class="approach-text">
-      Acredito em uma psicoterapia que une o rigor científico à sensibilidade humana. Cada sessão é um espaço de escuta genuína, onde construímos juntos ferramentas práticas e duradouras para a mudança.
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">CRP 03/11930 · Diego Benevides</div>
+    <h1 class="hero-title">
+      Relacionamento e Autoestima
+    </h1>
+    <p class="hero-subtitle" style="margin-bottom: 0.6rem;">
+      Psicólogo Clínico desde 2009, com experiência em atendimento psicológico online à adultos em todo o Brasil. Ao longo da trajetória profissional, já realizei mais de 1.500 atendimentos, oferecendo um espaço de escuta e acolhimento psicológico.
     </p>
-    <p class="approach-text">
-      Minha abordagem busca compreender como experiências passadas, conflitos emocionais, relações interpessoais e processos inconscientes influenciam a maneira como a pessoa pensa, sente e se comporta no presente.
+    <p class="hero-subtitle" style="margin-bottom: 0.6rem;">
+     Busco ajudar pacientes com problemas no relacionamento e autoestima. Com o intuito de ajuda-los a lidar com insegurança e ciúmes no relacionamento, angustia, desconfiança, medos e temores. Como também problemas de autoestima e insegurança.
+    </p>
+    <p class="hero-subtitle">
+      Utilizo a abordagem psicodinâmica que busca compreender, de forma profunda e individualizada, os pensamentos, sentimentos, comportamentos e conflitos que influenciam a maneira como cada pessoa se relaciona consigo mesma e com o mundo.
     </p>
   </div>
-  <div class="approach-right reveal visible">
-    <div class="approach-item">
-      <h4>Relacionamento</h4>
-      <p>Avaliarei seu posicionamento, postura e mentalidade frente ao relacionamento. Padrões de desequilíbrio emocional e posicionamento que influenciam de formas negativas no relacionamento.</p>
+  <div class="hero-right">
+    <div class="hero-image-bg"></div>
+    <div class="hero-shapes">
+      <div class="hero-circle"></div>
+      <div class="hero-circle"></div>
     </div>
-    <div class="approach-item">
-      <h4>Conflitos internos</h4>
-      <p>Trabalha com contradições entre desejos, necessidades, valores e expectativas.</p>
-    </div>
-    <div class="approach-item">
-      <h4>Autoestima</h4>
-      <p>Irei avaliar seus padrões de apego, mecanismos de defesa, como também suas relações de insegurança e medo. Para poder despertar a melhor versão de si mesmo(a).</p>
-    </div>
-    <div class="approach-item">
-      <h4>Sigilo e Ética Profissional</h4>
-      <p>Total confidencialidade conforme o Código de Ética do Conselho Federal de Psicologia.</p>
+    <div class="hero-quote">
+      <p>Se você sente que algo precisa ser compreendido, elaborado ou transformado, iniciar um processo de psicoterapia pode ser um importante passo para cuidar de si.</p>
     </div>
   </div>
 </section>
+
+<!-- WHATSAPP FLUTUANTE -->
+<a href="https://api.whatsapp.com/send/?phone=557592005073&text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20sobre%20hor%C3%A1rios%20de%20consulta&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Falar no WhatsApp" onclick="gtag('event','conversion',{'send_to':'AW-18170400847/ka6hCIP82rEcEM-gqdhD'});">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.75 13.4L3 21l3.7-1.28a8.9 8.9 0 0 0 4.35 1.13h.01a8.94 8.94 0 0 0 8.94-8.93 8.86 8.86 0 0 0-2.4-5.6zM12.06 19.3a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.97.94-2.73-.18-.28a7.42 7.42 0 1 1 6.09 3.24zm4.07-5.56c-.22-.11-1.31-.65-1.51-.72-.2-.08-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.16-.48.05a6.06 6.06 0 0 1-1.78-1.1 6.66 6.66 0 0 1-1.23-1.53c-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43a.82.82 0 0 0-.6.28 2.5 2.5 0 0 0-.78 1.86c0 1.1.8 2.16.91 2.31.11.15 1.58 2.41 3.83 3.38.53.23.95.37 1.27.47.53.17 1.02.15 1.4.09.43-.06 1.31-.53 1.49-1.05.18-.51.18-.95.13-1.05-.06-.1-.2-.16-.42-.27z"/></svg>
+  <span class="whatsapp-float-text">Falar no WhatsApp</span>
+</a>
 
 <!-- FOOTER -->
 <footer>
@@ -616,15 +623,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="footer-copy">© 2026 · CRP 03/11930 · Todos os direitos reservados</div>
 </footer>
 
-<!-- Event snippet for Reservar horário conversion page -->
-<script>
-  gtag('event', 'conversion', {'send_to': 'AW-18170400847/ka6hCIP82rEcEM-gqdhD'});
-</script>
-<!-- WHATSAPP FLUTUANTE -->
-<a href="https://api.whatsapp.com/send/?phone=557592005073&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Falar no WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.75 13.4L3 21l3.7-1.28a8.9 8.9 0 0 0 4.35 1.13h.01a8.94 8.94 0 0 0 8.94-8.93 8.86 8.86 0 0 0-2.4-5.6zM12.06 19.3a7.4 7.4 0 0 1-3.78-1.04l-.27-.16-2.8.97.94-2.73-.18-.28a7.42 7.42 0 1 1 6.09 3.24zm4.07-5.56c-.22-.11-1.31-.65-1.51-.72-.2-.08-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.16-.48.05a6.06 6.06 0 0 1-1.78-1.1 6.66 6.66 0 0 1-1.23-1.53c-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.2-.68-1.65-.18-.43-.36-.37-.5-.38h-.43a.82.82 0 0 0-.6.28 2.5 2.5 0 0 0-.78 1.86c0 1.1.8 2.16.91 2.31.11.15 1.58 2.41 3.83 3.38.53.23.95.37 1.27.47.53.17 1.02.15 1.4.09.43-.06 1.31-.53 1.49-1.05.18-.51.18-.95.13-1.05-.06-.1-.2-.16-.42-.27z"/></svg>
-  <span class="whatsapp-tooltip">Precisa de ajuda para marcar sua consulta?</span>
-</a>
 <script>
   const navToggle = document.querySelector('.nav-toggle');
   const navOverlay = document.querySelector('.nav-mobile-overlay');
